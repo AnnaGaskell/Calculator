@@ -1,51 +1,43 @@
 * {
-margin: 0;
-padding: 0;
 box-sizing: border-box;
 user-select: none;
 transition: all 0.2s ease;
 outline: none;
 border: none;
+font-family: 'Dosis', sans-serif;
 }
 
 body,
 html {
-font-family: "Dosis";
-color: #ffffff;
-padding-top: 2%;
 height: 100%;
 background: rgba(230, 200, 67, 0.979);
-/* background-size: cover; */
+}
+
+h1, h4{
+  margin: 0px;
+  text-align: center;
 }
 
 #calculator {
 width: 374px;
 height: auto;
 border-radius: 12px;
-margin: 50px auto;
+margin: 30px auto;
 padding: 5px 10px 10px;
-overflow: hidden;
 background: white;
 }
 
 #screen {
-display: flex;
-flex-direction: row-reverse;
 color: black;
-font-family: "Dosis";
 font-size: 40px;
 text-align: right;
 padding: 20px 10px 0px 0px;
 background: #B0BEC5;
 width: auto;
 height: 80px;
-overflow: hidden;
 margin: 10px 10px 10px 10px;
 border-radius: 3px;
-user-select: none;
-overflow: visible;
-word-wrap: break-word;
-word-break: break-all;
+overflow: scroll;
 }
 
 .row {
@@ -58,56 +50,29 @@ word-break: break-all;
 /*BUTTONS*/
 
 .btn {
-    outline: none;
-    position: relative;
-    background-color: #0a8fd1;
-    border-radius: 5px;
-    font-size: 40px;
-    font-family: "Dosis";
-    color: #fff;
-    padding: 0px;
-    margin: 5px 2px 5px 3px;
-    width: 80px;
-    height: 80px;
-    -webkit-transition: 0.05s;
-	  -moz-transition: 0.05s;
-	  transition: 0.05s;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px #455A64;
+  background-color: #0a8fd1;
+  border-radius: 5px;
+  font-size: 40px;
+  font-family: "Dosis";
+  color: #fff;
+  margin: 5px 2px 5px 3px;
+  width: 80px;
+  height: 80px;
+  -webkit-transition: 0.05s;
+  -moz-transition: 0.05s;
+  transition: 0.05s;
+  cursor: pointer;
+  box-shadow: 0 4px #455A64;
   
 }
 
 .btn:hover {
   background-color: #369;
   color: #fff;
-  box-shadow: 0 4px #455A64;
-	top: 2px;
 }
 
 .btn:active {
-  box-shadow: 0 0 #455A64;
-	top: 6px;
-}
-
-.clearBtn {
-  border-radius: 100px;
-  box-shadow: 0 4px #ab3c3c;
-  background: #cb4e4e;
-  color: #fff;
-  width: 45%
-
-}
-
-.clearBtn:hover {
-  background-color: black;
-	box-shadow: 0 4px #ab3c3c;
-	top: 2px;
-}
-
-.clearBtn:active {
-	box-shadow: 0 0 #ab3c3c;
-	top: 6px;
+  box-shadow: none;
 }
 
 .operatorBtn {
@@ -117,34 +82,56 @@ word-break: break-all;
 
 .operatorBtn:hover {
   background-color: #ab3c3c;
-	box-shadow: 0 4px #ab3c3c;
-	top: 2px;
+	box-shadow: 0 4px #cb4e4e;
 }
 
 .operatorBtn:active {
-	box-shadow: 0 0 #ab3c3c;
-	top: 6px;
+	box-shadow: none;
+}
+
+.delBtn {
+  box-shadow: 0 4px #ab3c3c;
+  background-color: #cb4e4e;
+}
+
+.delBtn:hover {
+  background-color: black;
+  box-shadow: 0 4px black;
+}
+
+.delBtn:active {
+  box-shadow: none;
+}
+
+.clearBtn {
+  border-radius: 100px;
+  box-shadow: 0 4px #ab3c3c;
+  background: #cb4e4e;
+  color: #fff;
+  width: 45%
+}
+
+.clearBtn:hover {
+  background-color: black;
+  box-shadow: 0 4px black;
+}
+
+.clearBtn:active {
+	box-shadow: none;
 }
 
 .equalsBtn {
-  box-shadow: 0 4px #455A64;
+  box-shadow: 0 4px #1a475c;
   background-color: #369;
   width: 45%;
 }
 
 .equalsBtn:hover {
   background-color: #FFA726;
-	box-shadow: 0 4px #455A64;
-	top: 2px;
+	box-shadow: 0 4px #A1887F;
 }
 
 .equalsBtn:active {
-	box-shadow: 0 0 #455A64;
-	top: 6px;
+	box-shadow: none;
 }
 
-.emptyButton {
-    color: white;
-    background-color: white;
-    box-shadow: none;
-}
