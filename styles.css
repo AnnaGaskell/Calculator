@@ -7,8 +7,8 @@ font-family: 'Dosis', sans-serif;
 
 body,
 html {
-height: 100%;
-background: rgba(230, 200, 67, 0.979);
+  height: 100%;
+  background: #e6c843fa;
 }
 
 h1, h4{
@@ -17,26 +17,33 @@ h1, h4{
 }
 
 #calculator {
-width: 374px;
-height: auto;
-border-radius: 12px;
-margin: 30px auto;
-padding: 5px 10px 10px;
-background: white;
+  width: 374px;
+  height: auto;
+  border-radius: 12px;
+  margin: 30px auto;
+  padding: 5px 10px 10px;
+  background: white;
 }
 
-#screen {
-color: black;
-font-size: 40px;
-text-align: right;
-padding: 20px 10px 0px 0px;
-background: #B0BEC5;
-width: auto;
-height: 80px;
-margin: 10px 10px 10px 10px;
-border-radius: 3px;
-overflow: scroll;
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  color: black;
+  font-size: 40px;
+  text-align: right;
+  padding: 20px 10px;
+  background: #B0BEC5;
+  width: auto;
+  height: 80px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 3px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
+
+
 
 .row {
   display:flex;
