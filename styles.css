@@ -1,7 +1,5 @@
 * {
-box-sizing: border-box;
 user-select: none;
-transition: all 0.2s ease;
 outline: none;
 border: none;
 font-family: 'Dosis', sans-serif;
