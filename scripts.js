@@ -87,8 +87,8 @@ function evaluate(){
 function chooseOperation(operator) {
     if (currentOperation !== null) evaluate()
     firstOperand = currentInput.textContent
-    currentOperation=operator
-    prevInput.textContent = `${firstOperand} ${operator}`
+    currentOperation = operator
+    prevInput.textContent = `${firstOperand} ${currentOperation}`
     resetOutput = true
 }
 
@@ -120,9 +120,9 @@ function operate (operator, a, b) {
     switch (operator) {
       case '+':
         return add(a, b)
-      case '−':
+      case '-':
         return subtract(a, b)
-      case '×':
+      case 'x':
         return multiply(a, b)
       case '÷':
         if (b === 0) return null
