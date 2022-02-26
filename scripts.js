@@ -9,7 +9,7 @@ let resetOutput = false
 
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
-const equalsButtons = document.getElementById('equalsBtn');
+const equalsButton = document.getElementById('equalsBtn');
 const deleteButton = document.getElementById('deleteBtn');
 const clearButton = document.getElementById('clearBtn');
 const decButton = document.getElementById('decimalBtn')
@@ -27,7 +27,7 @@ operationButtons.forEach((button) =>
     button.addEventListener('click', () => chooseOperation(button.textContent))
 )
 
-equalsButtons.addEventListener('click', evaluate)
+equalsButton.addEventListener('click', evaluate)
 deleteButton.addEventListener('click', remove)
 clearButton.addEventListener('click', clear)
 decButton.addEventListener('click', decimal)
@@ -87,6 +87,7 @@ function evaluate(){
 function chooseOperation(operator) {
     if (currentOperation !== null) evaluate()
     firstOperand = currentInput.textContent
+    currentOperation=operator
     prevInput.textContent = `${firstOperand} ${operator}`
     resetOutput = true
 }
@@ -120,7 +121,7 @@ function operate (operator, a, b) {
       case '+':
         return add(a, b)
       case '−':
-        return substract(a, b)
+        return subtract(a, b)
       case '×':
         return multiply(a, b)
       case '÷':
